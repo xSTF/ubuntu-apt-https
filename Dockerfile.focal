@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 RUN apt-get update &&\
-    apt-get install\
+    apt-get install -y\
         apt-transport-https\
         ca-certificates &&\
     printf "deb https://mirrors.ptisp.pt/ubuntu/ focal main universe\ndeb-src https://mirrors.ptisp.pt/ubuntu/ focal main universe" >/etc/apt/sources.list &&\
