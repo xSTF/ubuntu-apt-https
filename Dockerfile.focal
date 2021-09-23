@@ -4,9 +4,9 @@ RUN apt-get update &&\
     apt-get install -y\
         apt-transport-https\
         ca-certificates &&\
-    printf "deb https://mirrors.ptisp.pt/ubuntu/ focal main universe\ndeb-src https://mirrors.ptisp.pt/ubuntu/ focal main universe\n\n" >/etc/apt/sources.list &&\
-    printf "deb https://mirrors.ptisp.pt/ubuntu/ focal-updates main universe\ndeb-src https://mirrors.ptisp.pt/ubuntu/ focal-updates main universe" >>/etc/apt/sources.list &&\
     apt-get clean && \
     rm -rf \
         /tmp/* \
         /var/tmp/*
+
+COPY focal.list /etc/apt/sources.list
