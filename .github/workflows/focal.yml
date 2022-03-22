@@ -42,5 +42,5 @@ jobs:
         with:
           file: Dockerfile.focal
           push: true
-          tags: ghcr.io/xstf/ubuntu-apt-https:focal
+          tags: ghcr.io/xstf/ubuntu-apt-https:20.04
           labels: ${{ steps.meta.outputs.labels }}
